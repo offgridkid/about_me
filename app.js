@@ -4,7 +4,7 @@ var name = prompt('Hello, whats your name?');
 console.log('name: '+name);
 
 //first question
-var one = prompt('Do you imagine you\'d make a good software developer?');
+var one = prompt('Do you imagine you\'d make a good software developer? Please answer by typing yes or y, or no or n');
 console.log('first q: '+one);
 
 if (one.toLowerCase() === 'yes' || one.toLowerCase() === 'y') {
@@ -57,3 +57,43 @@ if (five.toLowerCase() === 'yes' || five.toLowerCase() === 'y') {
 } else {
   alert('well you\'re done anyways.');
 }
+
+//enter: wednesday
+//questionsixxx
+var counter = 0;
+var number;
+
+while (number !== 6 && counter !== 4) {
+  number = parseInt(prompt('How many times do you think I\'ve rewritten this code?'));
+
+  if (number < 6) {
+    alert('you guessed too low');
+    counter++;
+  } else if (number > 6) {
+    alert('you guessed too high');
+    counter++;
+  } else if (number === NaN || number === null) {
+    alert('enter a number please');
+    counter++;
+  }
+
+}
+
+console.log('counter:', counter);
+
+//se7en
+var states = ['virginia', 'kentucky'];
+
+for (var i = 0; i < 6; i++) {
+    var guess = prompt('Can you guess a state that I\'ve lived in?');
+    for (var n = 0, l = states.length; n < l; n++) {
+      if (guess === states[n]) {
+        alert('you\'re right!');
+        i = 6;
+        break;
+      } else {
+        alert('you\'re wrong');
+      }
+    }
+}
+alert('The only two states I\'ve lived in are '+states.toString());
