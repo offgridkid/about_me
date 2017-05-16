@@ -1,7 +1,9 @@
 'use strict';
 
-var name = prompt('Hello, whats your name?');
-console.log('name: '+name);
+
+  var name = prompt('Hello, whats your name?');
+  console.log('name: '+name);
+
 
 //first question
 function question1() {
